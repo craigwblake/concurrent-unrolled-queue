@@ -1,12 +1,11 @@
-name := "Concurrent unrolled queue"
+name := "concurrent-unrolled-queue"
 
 version := "0.1"
 
 mainClass in (Test, test) := Some("test.ConcurrentAddRemoveTest")
 
-scalaVersion := "2.9.2"
+scalaVersion := "2.10.0"
 
 scalacOptions ++= Seq("-deprecation", "-optimise")
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "1.8" % "test"
-
+libraryDependencies += "org.scalatest" %% "scalatest" % "1.9" % "test" cross CrossVersion.binary
