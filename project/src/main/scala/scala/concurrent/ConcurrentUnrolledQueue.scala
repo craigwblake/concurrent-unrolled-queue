@@ -320,7 +320,7 @@ object ConcurrentUnrolledQueue {
         fld.setAccessible(true)
         fld.get(null).asInstanceOf[sun.misc.Unsafe]
       } catch {
-        case e => throw new RuntimeException("Could not obtain access to sun.misc.Unsafe", e)
+        case e: Exception => throw new RuntimeException("Could not obtain access to sun.misc.Unsafe", e)
       }
   }
 
